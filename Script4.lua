@@ -317,13 +317,13 @@ if levelValue > 84 and levelValue < 90 then
     
 end
 
-if levelValue > 89 and levelValue < 95 then
-    local samuraiPalace = {
-        [1] = "Samurai Palace"
+if levelValue > 99 and levelValue < 105 then
+    local theCanals = {
+        [1] = "The Canals"
     }
     
-    local spInsane = {
-        [1] = "Samurai Palace",
+    local tcInsane = {
+        [1] = "The Canals",
         [2] = "Insane",
         [3] = 0,
         [4] = false,
@@ -331,18 +331,18 @@ if levelValue > 89 and levelValue < 95 then
         [6] = true
     }
     
-    game:GetService("ReplicatedStorage").remotes.getDungeonStats:InvokeServer(unpack(samuraiPalace))
+    game:GetService("ReplicatedStorage").remotes.getDungeonStats:InvokeServer(unpack(theCanals))
     wait(1)
-    game:GetService("ReplicatedStorage").remotes.createLobby:InvokeServer(unpack(spInsane))
+    game:GetService("ReplicatedStorage").remotes.createLobby:InvokeServer(unpack(tcInsane))
 end
 
-if tonumber(levelValue) > 94 then
-    local samuraiPalace = {
-        [1] = "Samurai Palace"
+if tonumber(levelValue) > 104 then
+    local theCanals = {
+        [1] = "The Canals"
     }
     
-    local spNightmare = {
-        [1] = "Samurai Palace",
+    local tcNightmare = {
+        [1] = "The Canals",
         [2] = "Nightmare",
         [3] = 0,
         [4] = false,
@@ -350,7 +350,7 @@ if tonumber(levelValue) > 94 then
         [6] = true
     }
     
-    game:GetService("ReplicatedStorage").remotes.getDungeonStats:InvokeServer(unpack(samuraiPalace))
+    game:GetService("ReplicatedStorage").remotes.getDungeonStats:InvokeServer(unpack(theCanals))
     wait(1)
-    game:GetService("ReplicatedStorage").remotes.createLobby:InvokeServer(unpack(spNightmare))
+    game:GetService("ReplicatedStorage").remotes.createLobby:InvokeServer(unpack(tcNightmare))
 end
