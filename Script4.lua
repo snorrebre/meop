@@ -1,15 +1,3 @@
-local lobbyTime = "13" -- How long it takes for you to load into the Lobby.
-local floorTime = "13" -- How long it takes for you to load into the Wave Defense.
-
-if game.PlaceId == 2414851778 then
-   wait(lobbyTime)
-   game:GetService("ReplicatedStorage").remotes.loadPlayerCharacter:FireServer()
-   wait(1)
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/owlsk/Dungeon-Quest/40dd648d2ae872705378f9dc2c3af7f8b5f864fd/levelCheck.lua'))()
-   wait(3)
-   game:GetService("ReplicatedStorage").remotes.startDungeon:FireServer()
-end
-
 local levelValue = game.Players.LocalPlayer.leaderstats.Level.Value
 
 if levelValue > 0 and levelValue < 6 then
